@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://C:/Users/mloco/Desktop/3o anno/Ingegneria della Conoscenza/progetto/src/kb/ontologia_n_8.owl"
+         xmlns="file://C:/Users/mloco/Desktop/3o anno/Ingegneria della Conoscenza/progetto/src/kb/ontologia_n_8.owl#">
+
+<owl:Ontology rdf:about="file://C:/Users/mloco/Desktop/3o anno/Ingegneria della Conoscenza/progetto/src/kb/ontologia_n_8.owl"/>
+
+<owl:DatatypeProperty rdf:about="#numeroAnelli">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cifra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haTrattoVerticale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cifra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haBasePesante">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cifra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Cifra">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraConAnelli">
+  <rdfs:subClassOf rdf:resource="#Cifra"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraTrattoSemplice">
+  <rdfs:subClassOf rdf:resource="#Cifra"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraOtto">
+  <rdfs:subClassOf rdf:resource="#CifraConAnelli"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraZero">
+  <rdfs:subClassOf rdf:resource="#CifraConAnelli"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraQuattro">
+  <rdfs:subClassOf rdf:resource="#CifraConAnelli"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraSei">
+  <rdfs:subClassOf rdf:resource="#CifraConAnelli"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CifraUno">
+  <rdfs:subClassOf rdf:resource="#CifraTrattoSemplice"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#campione_cifra_8">
+  <rdf:type rdf:resource="#Cifra"/>
+  <rdf:type rdf:resource="#CifraSei"/>
+  <numeroAnelli rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numeroAnelli>
+  <haTrattoVerticale rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</haTrattoVerticale>
+  <haBasePesante rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</haBasePesante>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
