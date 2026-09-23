@@ -1,4 +1,19 @@
-Sintesi del confronto concettuale
 ALB Decisione: Produce regole logiche esplicite Alimenta una KB simbolica White-Box.   
 SVC: Produce pesi vettoriali e iperpiani  Conoscenza sub-simbolica e geometrica.   
 KNN: Non compila modelli Ragionamento basato su casi pregressi (Case-Based Reasoning). 
+
+
+Estrazione della KB di Regole (DFS): È stata implementata in utils.py la funzione estrai_kb_regole che, tramite visita in profondità (Depth-First Search) dell'Albero di Decisione ottimale, trasforma ciascun ramo radice-foglia in una regola dichiarativa IF-THEN. 
+
+
+Generazione dei Fatti contingenti (ABox grezza): L'istanza estratta casualmente a run-time viene codificata e salvata come insieme di fatti atomici relazionali (es. fatto(pixel_36, 12.0). e ground_truth_target(8).) in un file dedicato per cifra (kb/fatti_n_X.txt).   
+
+Motore Deduttivo a Regole (inferenza_kb): È stato creato il motore di Forward Chaining in Python che confronta i fatti estratti con gli antecedenti delle regole salvate (kb/regole_n_X.txt), stampando a video la catena logica attivata.   
+
+
+Creazione del Modulo Indipendente: È stato sviluppato estensione_OWL.py basato sulla libreria owlready2 per gestire ontologie formali in standard W3C RDF/XML.
+
+Separazione Persistente TBox vs ABox:kb/digits_bk.owl: conserva la Background Knowledge pura, astratta e invariante del dominio.   kb/ontologia_n_X.owl: registra la TBox arricchita con la ABox del singolo campione osservato a run-time (campione_cifra_X)
+
+
+Disambiguazione Congiunta (Decision Tree + OntoBK): Strutturazione del verdetto tra Conferma Assiomatica, Contraddizione Esplicita ed esito Neutro (Open World Assumption).
