@@ -1,0 +1,4 @@
+Sintesi del confronto concettuale
+ALB Decisione: Produce regole logiche esplicite Alimenta una KB simbolica White-Box.   
+SVC: Produce pesi vettoriali e iperpiani  Conoscenza sub-simbolica e geometrica.   
+KNN: Non compila modelli Ragionamento basato su casi pregressi (Case-Based Reasoning). 
